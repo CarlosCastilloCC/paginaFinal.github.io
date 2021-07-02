@@ -1,0 +1,179 @@
+*{
+    margin: 0%;
+    padding: 0px;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+header nav {
+	float:right;
+    line-height:50px;
+    
+}
+
+header nav a {
+	color:#fff;
+	padding:10px 20px;
+    font-size:20px;
+    color: black;
+    
+}
+
+
+
+
+header nav a:hover{
+    background-color: rgb(133, 192, 192);
+    border-radius: 10px;
+    text-decoration:none;
+}
+
+.header-figureok{
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px; 
+}
+
+
+
+
+#light-dark-mode{
+    background-image: url(imagenes/icon-sun.svg);
+    width: 26px;
+    height: 26px;
+    margin-bottom: 0%;
+}
+
+body.light #light-dark-mode{
+    background-image: url(imagenes/icon-moon.svg);
+} 
+
+.bg-oscuro{
+    background-color:#4b4b4d !important;
+    
+}
+
+/*Light*/
+body.light .bg-dark{
+    background-color: #fff !important;
+}
+
+/*Light*/
+body.light .bg-oscuro{
+    background-color:#c0e8eb !important;
+}
+
+/*Light*/
+.text-white{
+    color:hsl(0, 0%, 100%)!important;
+}
+
+
+
+body.light .text-white{
+    color:hsl(0, 0%, 0%)!important;
+}
+
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+
+.banner{
+    background-image: url(imagenes/banner2.jpg);
+    background-repeat: no-repeat;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    height: 500px;
+}
+
+.poductos{
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    padding: 10px;
+}
+
+
+
+.precio{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    
+}
+
+.btn:hover{
+    background-color: #a5bdbe;
+}
+
+
+.cartas{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.almacen-carrito{
+    margin-top: 20px;
+    margin-block-end: 10px;
+    padding: 25px;
+    border-radius: 15px;
+    align-items: center;
+    height: 100px;
+}
+
+
+.boton-precio{
+    justify-content: space-between;
+    align-items: center;
+} 
+
+
+
+
+
+.item {
+    border: 2px solid #000;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  
+
+.imagen-carrito {
+    max-width: 80px;
+    border-radius: 20px;
+}
+
+  
+.total{
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.cont-cartas{
+    display: flex;
+}
+   
+
+
+
+@media screen and (max-width: 1018px){
+    .cont-cartas{
+        flex-direction: column;
+        display: flex none;
+    }
+
+    
+    
+
+}
+
+
+
+
+  
