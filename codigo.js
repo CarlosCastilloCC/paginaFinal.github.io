@@ -31,6 +31,7 @@ añadirItemsCarrito(itemTitulos, itemPrecio, itemImagen);
 
 function añadirItemsCarrito(itemTitulos, itemPrecio, itemImagen){
     const filaCarrito = document.createElement('div');
+    filaCarrito.classList.add("itemBox");
     const carritoContenido = `
         <div  class="row  almacen-carrito   h-100 w-100 mx-2">
                 <div class="col-8 ">
@@ -62,9 +63,11 @@ function añadirItemsCarrito(itemTitulos, itemPrecio, itemImagen){
     almacenCarrito .append(filaCarrito);
 
     filaCarrito.querySelector('.boton-borrar').addEventListener('click', borrarfila); 
+    NumItem.textContent = almacenCarrito.children.length;
     
+    carVacio.classList.remove('d-flex');
     carVacio.classList.add('d-none');
-      carVacio.classList.remove('d-flex');
+      
 
 }
 
@@ -73,6 +76,24 @@ function añadirItemsCarrito(itemTitulos, itemPrecio, itemImagen){
 
 const carVacio = document.querySelector('#vacio');
 
+/*  borrar productos  */ 
+function borrarfila(event) {
+    const buttonclicked = event.target;
+    //buttonclicked.closest('.almacen-carrito').remove();
+    //console.log( event.target.parentElement.parentElement);
+
+    event.target.parentElement.parentElement.parentElement.parentElement.remove();
+    
+    NumItem.textContent = almacenCarrito.children.length;
+    NumItem.textContent = almacenCarrito.children.length;
+
+    carVacio.classList.remove('d-flex');
+    carVacio.classList.add('d-none');
+      
+    
+}
+
+
 
 /*  borrar todos los productos  */ 
 var boton = document.getElementById("eliminar");
@@ -80,19 +101,14 @@ var boton = document.getElementById("eliminar");
 var boton = document.getElementById("eliminar");
 boton.addEventListener("click", function() {
   document.getElementById("vaciar").innerHTML = '';
+  NumItem.textContent = almacenCarrito.children.length;
 },false);
 
 
 
-/*  borrar productos  */ 
-function borrarfila(event) {
-    const buttonclicked = event.target;
-    buttonclicked.closest('.almacen-carrito').remove();
-    
-}
+
 
 const  NumItem = document.querySelector('#numero-item');
-NumItem.textContent = almacenCarrito.children.length;
 console.log();
 
 
